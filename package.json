@@ -1,15 +1,22 @@
 {
   "name": "farcaster-utils",
   "version": "0.1.0",
+  "description": "Shared utility functions for Farcaster and Neynar integrations",
   "type": "module",
-  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Igorehadem/farcaster-utils"
+  },
+  "keywords": ["farcaster", "neynar", "utils", "builder"],
   "scripts": {
     "build": "tsc -p .",
     "dev": "node --loader ts-node/esm src/demo.ts"
   },
-  "dependencies": {},
   "devDependencies": {
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
+  },
+  "exports": {
+    ".": "./dist/utils.js"
   }
 }
