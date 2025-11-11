@@ -1,9 +1,10 @@
-export const nowISO = () => new Date().toISOString();
+/** Returns current UTC time as ISO string */
+export const nowISO = (): string => new Date().toISOString();
 
-export function sleep(ms: number) {
-  return new Promise((resolve) => setTimeout(resolve, ms));
-}
+/** Async delay helper */
+export const sleep = (ms: number): Promise<void> =>
+  new Promise((resolve) => setTimeout(resolve, ms));
 
-export function truncate(text: string, n = 120) {
-  return text.length > n ? text.slice(0, n - 1) + "…" : text;
-}
+/** Truncates long text and appends ellipsis */
+export const truncate = (text: string, n = 120): string =>
+  text.length > n ? text.slice(0, n) + "…" : text;
