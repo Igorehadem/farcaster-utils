@@ -1,10 +1,10 @@
-import { nowISO, truncate, sleep } from "./utils.js";
-
-console.log("🧩 Farcaster Utils Demo started @", nowISO());
+import { fetchCasts, publishCast } from "./neynarClient.js";
 
 (async () => {
-  console.log(truncate("This is a demo output to keep the repo alive and useful.", 40));
-  console.log("⏳ Waiting 1 second...");
-  await sleep(1000);
-  console.log("✅ Demo finished @", nowISO());
+  console.log("🧩 Fetching latest casts via Neynar...");
+  const casts = await fetchCasts();
+  console.log("✅ Received", casts.length, "casts");
+  if (casts[0]) console.log("First cast:", casts[0].text);
+
+  await publishCast("Hello from Farcaster Utils demo 🚀");
 })();
