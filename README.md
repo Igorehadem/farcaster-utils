@@ -29,6 +29,16 @@ Example:
 ```bash
 npm run dev
 ```
+---
+
+## 🌐 Neynar Client
+
+A minimal wrapper is available under `src/neynarClient.ts`.
+
+Functions:
+- `fetchCasts(fid?)` — get latest Farcaster casts
+- `publishCast(text)` — post a new cast (simulated)
+- `getReactions(castHash)` — fetch likes and recasts
 
 ---
 
