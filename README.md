@@ -1,11 +1,51 @@
-## Usage (placeholder)
-- Copy `.env.example` to `.env`
-- (Later) Add Neynar SDK usage examples
+
+# 🧩 Farcaster Utils
+
+Shared utility functions and helpers for **Farcaster** / **Neynar** integrations.  
+Lightweight, framework‑agnostic, and reusable across Remix, Next.js, or Node scripts.
+
+---
+
+## ⚙️ Setup
 
 ```bash
 npm install
 npm run dev
-## Related
-- https://github.com/Igorehadem/farcaster-bot-starter
-- https://github.com/Igorehadem/base-frame-tester
-- https://github.com/Igorehadem/onchain-safety-checklist
+```
+
+Copy `.env.example` to `.env` and fill in your keys before testing.
+
+---
+
+## 🔧 Provided Utilities
+
+| Function | Description |
+|-----------|--------------|
+| `nowISO()` | Returns UTC timestamp in ISO format |
+| `sleep(ms)` | Delays execution for given ms |
+| `truncate(text, n)` | Shortens text and appends ellipsis |
+
+Example:
+```bash
+npm run dev
+```
+
+---
+
+## 📚 Docs
+
+See [`docs/overview.md`](./docs/overview.md) for detailed descriptions and examples.
+
+---
+
+## 🧭 Roadmap
+
+- [ ] Add API helper for Neynar client  
+- [ ] Add text normalization helpers (for bots)  
+- [ ] Add mock tests for truncate and sleep  
+
+---
+
+## 🪪 License
+
+MIT © 2025 Igorehadem
